@@ -12,6 +12,7 @@ function changeState(state, action) {
 }
 
 let state = { count: 0 };
+let action = { type: "counter/increment" };
 
 console.log(state);
 
@@ -20,5 +21,11 @@ state = changeState(state, { type: "counter/increment" });
 console.log(state);
 
 state = changeState(state, { type: "counter/decrement" });
+
+console.log(state);
+
+state = changeState(state, { type: "counter/increment" });
+state = changeState(state, action);
+state = changeState(state, action);
 
 console.log(state);
